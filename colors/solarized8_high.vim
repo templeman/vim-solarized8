@@ -46,6 +46,58 @@ hi! link Tag Special
 hi! link Typedef Type
 hi! link lCursor Cursor
 
+
+" ============================================================================
+" Custom colors
+" ============================================================================
+
+hi! dkoBgAlt            guibg=#24252a               ctermbg=236
+hi! dkoBgLight          guibg=#303135               ctermbg=237
+hi! dkoTextLight        guifg=#dddddd                           ctermfg=253
+
+hi! dkoPopup            guibg=#2a2a2f guifg=#ccc0c0
+hi! dkoPopupBlank       guibg=#2a2a2f guifg=#2a2a2f
+
+hi! dkoDecorations                    guifg=#505a6a
+hi! dkoRegex                          guifg=#cc99cc
+hi! dkoReturn                         guifg=#cc8877 gui=italic
+hi! dkoQuote                          guifg=#77aa88 gui=italic
+hi! dkoType                           guifg=#60687a gui=italic
+hi! dkoWarningText      guibg=#2c2b2a guifg=#ddaa66 gui=bold
+hi! dkoNormalKey                      guifg=#ccccbb
+
+hi! dkoSignWarning                    guifg=#ddaa66
+hi! dkoSignInfo                       guifg=fg
+hi! dkoSignMessage                    guifg=#77aa88
+
+hi! dkoStatus           guibg=#30313c guifg=#bbbbbb gui=NONE  ctermbg=237
+hi! dkoStatusNC         guibg=#262631 guifg=#666666 gui=NONE  ctermbg=235
+hi! dkoStatusKey        guibg=#40404c
+hi! dkoStatusValue      guibg=#50505c
+hi! dkoStatusItem       guibg=#242531
+hi! dkoStatusTransient  guibg=#505a71 guifg=fg
+hi! dkoStatusGood       guibg=#242531 guifg=#77aa88
+hi! dkoStatusError      guibg=#242531 guifg=#cc4444
+hi! dkoStatusWarning    guibg=#242531 guifg=#ddaa66
+hi! dkoStatusInfo       guibg=#242531 guifg=fg
+
+
+" ============================================================================
+" Status and tab line
+" ============================================================================
+
+" Statusline uses fg as bg
+hi! link StatusLineNC   dkoStatusNC
+hi! link StatusLine     dkoStatus
+hi! link TabLine        dkoStatus
+hi! link TabLineFill    dkoStatus
+hi! link TabLineSel     dkoStatus
+
+
+" ============================================================================
+" Solarized base
+" ============================================================================
+
 if &background ==# 'dark'
   if (has('termguicolors') && &termguicolors) || has('gui_running')
     let g:terminal_ansi_colors = ['#073642', '#dc322f', '#859900', '#b58900', '#268bd2', '#d33682', '#2aa198', '#fdf6e3', '#002b36', '#cb4b16', '#657b83', '#839496', '#93a1a1', '#6c71c4', '#eee8d5', '#fdf6e3']
